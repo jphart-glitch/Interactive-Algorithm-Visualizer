@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- =============================================================== -->
+<!-- index.html                                                      -->
+<!-- Author: John Hart                                               -->
+<!-- =============================================================== -->
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<title>IAV - Interact</title>
+
+<!-- ==================== Import dependencies ====================== -->
+{% include 'imports.html' %}
+
+</head>
+<body>
+    <div class="container-fluid" style="background-color:black;
+    color:darkorange">
+        <br>
+        <center>
+            <h1>Interactive Algorithm Visualizer</h1>
+        </center>
+        <br>
+    </div>
+
+    <br><br><br>
+    <div class="row" id="lists">
+        <div class="col-sm">
+            <div class="dropdown show">
+                <a class="btn btn-secondary dropdown-toggle"
+                role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Sorts</button>
+                
+                <div class="dropdown-menu"
+                aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="/selection-sort">
+                        Selection Sort</a>
+                    <a class="dropdown-item" href="/insertion-sort">
+                        Insertion Sort</a>
+                    <a class="dropdown-item" href="/merge-sort">
+                        Merge Sort</a>
+                    <a class="dropdown-item" href="/quick-sort">
+                        Quick Sort</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="dropdown show">
+                <button class="btn btn-secondary dropdown-toggle"
+                type="button" id="stacks-and-queues-dropdown"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Stacks and Queues</button>
+                
+                <div class="dropdown-menu"
+                aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="/stack">
+                        Stack</a>
+                    <a class="dropdown-item" href="/queue">
+                        Queue</a>
+                    <a class="dropdown-item" href="/priority-queue">
+                        Priority Queue</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="dropdown show">
+                <button class="btn btn-secondary dropdown-toggle"
+                type="button" id="balanced-trees-dropdown"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Balanced Trees</button>
+                
+                <div class="dropdown-menu"
+                aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="/2-3-trees">
+                        2-3 Trees</a>
+                    <a class="dropdown-item" href="/red-black-trees">
+                        Red-Black Trees</a>
+                    <a class="dropdown-item" href="/k-d-trees">
+                        K-D Trees</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="dropdown show">
+                <button class="btn btn-secondary dropdown-toggle"
+                type="button" id="balanced-trees-dropdown"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Graphs and Digraphs</button>
+                
+                <div class="dropdown-menu"
+                aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="/depth-first-search">
+                        Depth-First Search</a>
+                    <a class="dropdown-item" href="/breadth-first-search">
+                        Breadth-First Search</a>
+                    <a class="dropdown-item" href="/minimum-spanning-trees">
+                        Minimum Spanning Trees</a>
+                    <a class="dropdown-item" href="/topological-sort">
+                        Topological Sort</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

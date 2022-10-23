@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- =============================================================== -->
+<!-- index.html                                                      -->
+<!-- Author: John Hart                                               -->
+<!-- =============================================================== -->
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<title>IAV - Home</title>
+
+<!-- ==================== Import dependencies ====================== -->
+{% include 'imports.html' %}
+
+</head>
+<body>
+    <div class="container-fluid" style="background-color:black;
+    color:darkorange">
+        <br>
+        <center>
+            <h1>Interactive Algorithm Visualizer</h1>
+        </center>
+        <br>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
+    <div class="row" id="buttons">
+        <div class="col-sm">
+            <center>
+                <a href="/interact">
+                    <label class="btn btn-outline-secondary">
+                    <strong>Interact</strong></label>
+                </a>
+            </center>
+        </div>
+        <div class="col-sm">
+            <center>
+                <a href="/example-run">
+                    <label class="btn btn-outline-secondary">
+                    <strong>Example Run</strong></label>
+                </a>
+            </center>
+        </div>
+        <div class="col-sm">
+            <center>
+                <a href="/debug">
+                    <label class="btn btn-outline-secondary">
+                    <strong>Debug</strong></label>
+                </a>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
