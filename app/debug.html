@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- =============================================================== -->
+<!-- debug.html                                                      -->
+<!-- Author: John Hart                                               -->
+<!-- =============================================================== -->
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<title>Debug - Interalgo</title>
+
+<!-- ==================== Import dependencies ====================== -->
+{% include 'imports.html' %}
+
+</head>
+
+<!-- ============================ HTML ============================= -->
+<body>
+    <div class="container-fluid" style="background-color:black;
+    color:darkorange">
+        <br>
+        <center>
+            <h1>Interactive Algorithm Visualizer</h1>
+        </center>
+        <br>
+    </div>
+
+    <br><br><br>
+    <div class="row" id="lists">
+        <div class="col-sm">
+            <center><div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle"
+                role="button" id="sorts-dropdown"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Sorts</button>
+                
+                <div class="dropdown-menu"
+                aria-labelledby="sorts-dropdown">
+                    <a class="dropdown-item" href="/debug/selection-sort">
+                        Selection Sort</a>
+                    <a class="dropdown-item" href="/debug/insertion-sort">
+                        Insertion Sort</a>
+                    <a class="dropdown-item" href="/debug/merge-sort">
+                        Merge Sort</a>
+                    <a class="dropdown-item" href="/debug/quick-sort">
+                        Quick Sort</a>
+                </div>
+            </div></center>
+        </div>
+        <div class="col-sm">
+            <center><div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle"
+                type="button" id="stacks-and-queues-dropdown"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Stacks and Queues</button>
+                
+                <div class="dropdown-menu"
+                aria-labelledby="stacks-and-queues-dropdown">
+                    <a class="dropdown-item" href="/debug/stack">
+                        Stack</a>
+                    <a class="dropdown-item" href="/debug/queue">
+                        Queue</a>
+                    <a class="dropdown-item" href="/debug/priority-queue">
+                        Priority Queue</a>
+                </div>
+            </div></center>
+        </div>
+        <div class="col-sm">
+            <center><div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle"
+                type="button" id="balanced-trees-dropdown"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Balanced Trees</button>
+                
+                <div class="dropdown-menu"
+                aria-labelledby="balanced-trees-dropdown">
+                    <a class="dropdown-item" href="/debug/2-3-trees">
+                        2-3 Trees</a>
+                    <a class="dropdown-item" href="/debug/red-black-trees">
+                        Red-Black Trees</a>
+                    <a class="dropdown-item" href="/debug/k-d-trees">
+                        K-D Trees</a>
+                </div>
+            </div></center>
+        </div>
+        <div class="col-sm">
+            <center><div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle"
+                type="button" id="graphs-and-digraphs-dropdown"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Graphs and Digraphs</button>
+                
+                <div class="dropdown-menu"
+                aria-labelledby="graphs-and-digraphs-dropdown">
+                    <a class="dropdown-item" href="/debug/depth-first-search">
+                        Depth-First Search</a>
+                    <a class="dropdown-item" href="/debug/breadth-first-search">
+                        Breadth-First Search</a>
+                    <a class="dropdown-item" href="/debug/minimum-spanning-trees">
+                        Minimum Spanning Trees</a>
+                    <a class="dropdown-item" href="/debug/topological-sort">
+                        Topological Sort</a>
+                </div>
+            </div></center>
+        </div>
+    </div>
+
+    <!-- ======================= Javascript ======================== -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

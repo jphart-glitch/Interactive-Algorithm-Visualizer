@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- =============================================================== -->
-<!-- index.html                                                      -->
+<!-- interact.html                                                   -->
 <!-- Author: John Hart                                               -->
 <!-- =============================================================== -->
 
@@ -9,12 +9,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
-<title>IAV - Interact</title>
+<title>Interact - Interalgo</title>
 
 <!-- ==================== Import dependencies ====================== -->
 {% include 'imports.html' %}
 
 </head>
+
+<!-- ============================ HTML ============================= -->
 <body>
     <div class="container-fluid" style="background-color:black;
     color:darkorange">
@@ -28,81 +30,87 @@
     <br><br><br>
     <div class="row" id="lists">
         <div class="col-sm">
-            <div class="dropdown show">
-                <a class="btn btn-secondary dropdown-toggle"
-                role="button" id="dropdownMenuLink"
+            <center><div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle"
+                role="button" id="sorts-dropdown"
                 data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">Sorts</button>
                 
                 <div class="dropdown-menu"
-                aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="/selection-sort">
+                aria-labelledby="sorts-dropdown">
+                    <a class="dropdown-item" href="/interact/selection-sort">
                         Selection Sort</a>
-                    <a class="dropdown-item" href="/insertion-sort">
+                    <a class="dropdown-item" href="/interact/insertion-sort">
                         Insertion Sort</a>
                     <a class="dropdown-item" href="/merge-sort">
                         Merge Sort</a>
-                    <a class="dropdown-item" href="/quick-sort">
+                    <a class="dropdown-item" href="/interact/quick-sort">
                         Quick Sort</a>
                 </div>
-            </div>
+            </div></center>
         </div>
         <div class="col-sm">
-            <div class="dropdown show">
+            <center><div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle"
                 type="button" id="stacks-and-queues-dropdown"
                 data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">Stacks and Queues</button>
                 
                 <div class="dropdown-menu"
-                aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="/stack">
+                aria-labelledby="stacks-and-queues-dropdown">
+                    <a class="dropdown-item" href="/interact/stack">
                         Stack</a>
-                    <a class="dropdown-item" href="/queue">
+                    <a class="dropdown-item" href="/interact/queue">
                         Queue</a>
-                    <a class="dropdown-item" href="/priority-queue">
+                    <a class="dropdown-item" href="/interact/priority-queue">
                         Priority Queue</a>
                 </div>
-            </div>
+            </div></center>
         </div>
         <div class="col-sm">
-            <div class="dropdown show">
+            <center><div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle"
                 type="button" id="balanced-trees-dropdown"
                 data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">Balanced Trees</button>
                 
                 <div class="dropdown-menu"
-                aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="/2-3-trees">
+                aria-labelledby="balanced-trees-dropdown">
+                    <a class="dropdown-item" href="/interact/2-3-trees">
                         2-3 Trees</a>
-                    <a class="dropdown-item" href="/red-black-trees">
+                    <a class="dropdown-item" href="/interact/red-black-trees">
                         Red-Black Trees</a>
-                    <a class="dropdown-item" href="/k-d-trees">
+                    <a class="dropdown-item" href="/interact/k-d-trees">
                         K-D Trees</a>
                 </div>
-            </div>
+            </div></center>
         </div>
         <div class="col-sm">
-            <div class="dropdown show">
+            <center><div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle"
-                type="button" id="balanced-trees-dropdown"
+                type="button" id="graphs-and-digraphs-dropdown"
                 data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">Graphs and Digraphs</button>
                 
                 <div class="dropdown-menu"
-                aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="/depth-first-search">
+                aria-labelledby="graphs-and-digraphs-dropdown">
+                    <a class="dropdown-item" href="/interact/depth-first-search">
                         Depth-First Search</a>
-                    <a class="dropdown-item" href="/breadth-first-search">
+                    <a class="dropdown-item" href="/interact/breadth-first-search">
                         Breadth-First Search</a>
-                    <a class="dropdown-item" href="/minimum-spanning-trees">
+                    <a class="dropdown-item" href="/interact/minimum-spanning-trees">
                         Minimum Spanning Trees</a>
-                    <a class="dropdown-item" href="/topological-sort">
+                    <a class="dropdown-item" href="/interact/topological-sort">
                         Topological Sort</a>
                 </div>
-            </div>
+            </div></center>
         </div>
     </div>
+
+    <!-- ======================= Javascript ======================== -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 </html>

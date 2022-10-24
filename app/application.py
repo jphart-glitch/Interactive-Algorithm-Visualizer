@@ -1,5 +1,6 @@
 # ----------------------------------------------------------------------
 # application.py
+# Author: John Hart
 # ----------------------------------------------------------------------
 
 # ------------------- standard library imports -------------------------
@@ -33,5 +34,29 @@ def index() :
 @app.route('/interact', methods=['GET'])
 def interact() :
     html = render_template('interact.html')
+    response = make_response(html)
+    return response
+
+# example run page
+@app.route('/example-run', methods=['GET'])
+def example_run() :
+    html = render_template('example-run.html')
+    response = make_response(html)
+    return response
+
+# debug page
+@app.route('/debug', methods=['GET'])
+def debug() :
+    html = render_template('debug.html')
+    response = make_response(html)
+    return response
+
+# -------------------------- interact pages ----------------------------
+# Content related to Interact feature of the application
+
+# merge sort
+@app.route('/merge-sort', methods=['GET'])
+def merge_sort() :
+    html = render_template('merge-sort.html')
     response = make_response(html)
     return response

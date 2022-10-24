@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- =============================================================== -->
+<!-- interact.html                                                   -->
+<!-- Author: John Hart                                               -->
+<!-- =============================================================== -->
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<title>Interact - Interalgo</title>
+
+<!-- ==================== Import dependencies ====================== -->
+{% include 'imports.html' %}
+<link rel="stylesheet" href="static/js/my-app/src/index.css">
+
+</head>
+
+<!-- ============================ HTML ============================= -->
+<body>
+    <div class="container-fluid" style="background-color:black;
+    color:darkorange">
+        <br>
+        <center>
+            <h1>Interactive Algorithm Visualizer</h1>
+        </center>
+        <br>
+    </div>
+
+    <br><br><br>
+    <div id="react-stuff"></div>
+
+    <!-- ======================= Javascript ======================== -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="static/js/my-app/src/index.js"></script>
+</body>
+</html>
