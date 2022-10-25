@@ -13,7 +13,7 @@
 
 <!-- ==================== Import dependencies ====================== -->
 {% include 'imports.html' %}
-<link rel="stylesheet" href="static/js/my-app/src/index.css">
+<link rel="stylesheet" href="static/js/my-app/src/array.css">
 
 </head>
 
@@ -29,11 +29,12 @@
     </div>
 
     <br><br><br>
-    <div id="react-stuff"></div>
+    <div id="array_container" style="width:100%;height:600px"></div>
 
     <!-- ======================= Javascript ======================== -->
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="static/js/my-app/src/index.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel" src="static/js/my-app/src/array.js"></script>
 </body>
 </html>
