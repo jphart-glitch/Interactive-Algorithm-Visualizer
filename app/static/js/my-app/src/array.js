@@ -15,11 +15,59 @@ class Square extends React.Component {
     };
   }
 
+  handleDragStart = () => {
+    let i = this.state.value;
+    console.log("Drag of Square #" + i + " has begun!");
+  };
+
+  handleDragEnd = () => {
+    let i = this.state.value;
+    console.log("Drag of Square #" + i + " has ended!");
+  };
+
+  handleDragEnter = e => {
+    let i = this.state.value;
+    console.log("Dragging over Square #" + i + " has begun!");
+    e.stopPropagation();
+    e.preventDefault();
+  };
+
+  // handleDragOver = e => {
+  //   let i = this.state.value;
+  //   console.log("Dragging over Square #" + i + " is occurring!");
+  //   e.stopPropogation()
+  //   e.preventDefault()
+  // };
+
+  handleDragLeave = e => {
+    let i = this.state.value;
+    console.log("Dragging over Square #" + i + " has ended!");
+    e.stopPropagation();
+    e.preventDefault();
+  }
+
+  handleDrop = e => {
+    let i = this.state.value;
+    console.log("Dropped into Square #" + i + "!");
+    e.stopPropagation();
+    e.preventDefault();
+  }
+
   render() {
     return (
       <button className="square" draggable="true"
-      onDragStart={this.props.onDragStart} onDragEnd={this.props.onDragEnd} 
-      onDragEnter={this.props.onDragEnter} onDragLeave={this.props.onDragLeave}>
+      // onDragStart={this.props.onDragStart} 
+      // onDragEnd={this.props.onDragEnd} 
+      // onDragEnter={this.props.onDragEnter} 
+      // onDragLeave={this.props.onDragLeave} 
+      // onDrop={this.props.onDrop}
+      onDragStart={this.handleDragStart} 
+      onDragEnd={this.handleDragEnd} 
+      onDragEnter={this.handleDragEnter} 
+      // onDragOver={this.handleDragOver}
+      onDragLeave={this.handleDragLeave} 
+      onDrop={this.handleDrop}
+      >
         {this.state.value}
       </button>
     );
@@ -27,13 +75,15 @@ class Square extends React.Component {
 }
 
 class FullArray extends React.Component {
+
   renderSquare(i) {
     return <Square 
       value={i} 
-      onDragStart={() => this.props.onDragStart(i)} 
-      onDragEnd={() => this.props.onDragEnd(i)} 
-      onDragEnter={event => this.props.onDragEnter(event, i)} 
-      onDragLeave={event => this.props.onDragLeave(event, i)}
+      // onDragStart={this.props.onDragStart(i)} 
+      // onDragEnd={this.props.onDragEnd(i)} 
+      // onDragEnter={e => this.props.onDragEnter(e, i)} 
+      // onDragLeave={e => this.props.onDragLeave(e, i)} 
+      // onDrop={e => this.props.onDrop(e, i)}
     />;
   }
 
@@ -54,34 +104,42 @@ class FullArray extends React.Component {
 }
 
 class Simulation extends React.Component {
-  handleDragStart(i) {
-    console.log("Drag of Square #" + i + " has begun!");
-  }
+  // handleDragStart(i) {
+  //   console.log("Drag of Square #" + i + " has begun!");
+  // }
 
-  handleDragEnd(i) {
-    console.log("Drag of Square #" + i + " has ended!");
-  }
+  // handleDragEnd(i) {
+  //   console.log("Drag of Square #" + i + " has ended!");
+  // }
 
-  handleDragEnter(event, i) {
-    console.log("Dragging over Square #" + i + " has begun!");
-    event.stopPropagation();
-    event.preventDefault();
-  }
+  // handleDragEnter(e, i) {
+  //   console.log("Dragging over Square #" + i + " has begun!");
+  //   e.stopPropagation();
+  //   e.preventDefault();
+  // }
 
-  handleDragLeave(event, i) {
-    console.log("Dragging over Square #" + i + " has ended!");
-    event.stopPropagation();
-    event.preventDefault();
-  }
+  // handleDragLeave(e, i) {
+  //   console.log("Dragging over Square #" + i + " has ended!");
+  //   e.stopPropagation();
+  //   e.preventDefault();
+  //   console.log(e);
+  // }
+
+  // handleDrop(e, i) {
+  //   console.log("Dropped into Square #" + i + "!");
+  //   e.stopPropagation();
+  //   e.preventDefault();
+  // }
 
   render() {
     return(
     <div className="simulation">
       <FullArray 
-        onDragStart={this.handleDragStart}
-        onDragEnd={this.handleDragEnd}
-        onDragEnter={this.handleDragEnter} 
-        onDragLeave={this.handleDragLeave}
+        // onDragStart={this.handleDragStart}
+        // onDragEnd={this.handleDragEnd}
+        // onDragEnter={this.handleDragEnter} 
+        // onDragLeave={this.handleDragLeave}
+        // onDrop={this.handleDrop}
       />
     </div>
     );
