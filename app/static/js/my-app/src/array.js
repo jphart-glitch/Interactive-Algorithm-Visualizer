@@ -9,43 +9,32 @@ class Square extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value : props.value
+      value : props.value,
+      dragging : false,
+      entered : false
     };
   }
 
   render() {
     return (
-      <button className="square" draggable="true">
+      <button className="square" draggable="true"
+      onDragStart={this.props.onDragStart} onDragEnd={this.props.onDragEnd} 
+      onDragEnter={this.props.onDragEnter} onDragLeave={this.props.onDragLeave}>
         {this.state.value}
       </button>
     );
   }
-  // handleDragStart = event => {
-  //   // console.log("Drag of Square #" + this.props.value + " has begun!");
-  // }
-
-  // handleDragEnd = event => {
-  //   // console.log("Drag of Square #" + this.props.value + " has ended!");
-  // }
-
-  // handleDragEnter = event => {
-  //   // console.log("Dragging over Square #" + this.props.value + " has begun!");
-  //   event.stopPropagation();
-  //   event.preventDefault();
-  // }
-
-  // handleDragLeave = event => {
-  //   // console.log("Dragging over Square #" + this.props.value + " has ended!");
-  //   event.stopPropagation();
-  //   event.preventDefault();
-  // }
-  // onDragStart={this.handleDragStart} onDragEnd={this.handleDragEnd}
-  // onDragEnter={this.handleDragEnter} onDragLeave={this.handleDragLeave}
 }
 
 class FullArray extends React.Component {
   renderSquare(i) {
-    return <Square value={i}/>;
+    return <Square 
+      value={i} 
+      onDragStart={() => this.props.onDragStart(i)} 
+      onDragEnd={() => this.props.onDragEnd(i)} 
+      onDragEnter={event => this.props.onDragEnter(event, i)} 
+      onDragLeave={event => this.props.onDragLeave(event, i)}
+    />;
   }
 
   render() {
@@ -65,10 +54,35 @@ class FullArray extends React.Component {
 }
 
 class Simulation extends React.Component {
+  handleDragStart(i) {
+    console.log("Drag of Square #" + i + " has begun!");
+  }
+
+  handleDragEnd(i) {
+    console.log("Drag of Square #" + i + " has ended!");
+  }
+
+  handleDragEnter(event, i) {
+    console.log("Dragging over Square #" + i + " has begun!");
+    event.stopPropagation();
+    event.preventDefault();
+  }
+
+  handleDragLeave(event, i) {
+    console.log("Dragging over Square #" + i + " has ended!");
+    event.stopPropagation();
+    event.preventDefault();
+  }
+
   render() {
     return(
     <div className="simulation">
-      <FullArray />
+      <FullArray 
+        onDragStart={this.handleDragStart}
+        onDragEnd={this.handleDragEnd}
+        onDragEnter={this.handleDragEnter} 
+        onDragLeave={this.handleDragLeave}
+      />
     </div>
     );
   }
