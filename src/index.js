@@ -1,13 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
-
-import Home from "./components/Home";
+import App from './components/App';
 
 const myFirstElement = <h1>Hello React!</h1>
 
@@ -90,50 +83,5 @@ class Garage extends React.Component {
 
 const garage = <Garage />;
 
-const router = <Router>
-  <div>
-    {/* <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/interact">Interact</Link>
-        </li>
-        <li>
-          <Link to="/example-run">Example Run</Link>
-        </li>
-        <li>
-          <Link to="/debug">Debug</Link>
-        </li>
-      </ul>
-    </nav> */}
-
-    <Routes>
-      <Route exact path="/" element={<Home />}/>
-      <Route exact path="/interact" element={<Interact />}/>
-      <Route exact path="/examplerun" element={<ExampleRun />}/>
-      <Route exact path="/debug" element={<Debug />}/>
-      <Route path="*" element={<NotFound />}/>
-    </Routes>
-  </div>
-</Router>
-
-// function Home() {
-//   return <h2>Home</h2>
-// }
-function Interact() {
-  return <h2>Interact</h2>
-}
-function ExampleRun() {
-  return <h2>Example Run</h2>
-}
-function Debug() {
-  return <h2>Debug</h2>
-}
-function NotFound() {
-  return <h2>Not Found</h2>
-}
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(router);
+root.render(<App />);
