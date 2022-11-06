@@ -5,7 +5,7 @@
 
 import React from "react";
 
-export default function Square({ black, children }) {
+export default function ChessboardSquare({ black, children }) {
   const fill = black ? 'black' : 'white'
   const stroke = black ? 'white' : 'black'
 

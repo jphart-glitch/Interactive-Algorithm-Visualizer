@@ -34,6 +34,10 @@ const Interact = () => {
             {/* Endpoint to route to Chessboard component */}
             <Link to="/chessboard">Chessboard Example</Link>
           </li>
+          <li>
+          {/* Endpoint to route to Simulation component */}
+          <Link to="/simulation">Merge Sort Simulation</Link>
+        </li>
         </ul>
       </div>
     );

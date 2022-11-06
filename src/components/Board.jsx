@@ -7,6 +7,13 @@ import React from "react";
 
 import ChessboardSquare from './ChessboardSquare'
 import ChessboardKnight from './ChessboardKnight'
+import { canMoveKnight, moveKnight } from './Game'
+
+function handleSquareClick(toX, toY) {
+  if (canMoveKnight(toX, toY)) {
+    moveKnight(toX, toY)
+  }
+}
 
 function renderSquare(i, [knightX, knightY]) {
   const x = i % 8
@@ -14,13 +21,11 @@ function renderSquare(i, [knightX, knightY]) {
   const isKnightHere = x === knightX && y === knightY
   const black = (x + y) % 2 === 1
   const piece = isKnightHere ? <ChessboardKnight /> : null
-
-  return (
-    <div key={i} style={{ width: '12.5%', height: '12.5%' }}>
-      <ChessboardSquare black={black}>{piece}</ChessboardSquare>
-    </div>
-  )
-}
+    
+  return <div onClick={() => handleSquareClick(x, y)}>
+    <ChessboardSquare black={black}>{piece}</ChessboardSquare>
+  </div>
+  }
 
 export default function Board({ knightPosition }) {
   const squares = []

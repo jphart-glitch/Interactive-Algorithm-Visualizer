@@ -5,15 +5,18 @@
 
 import React from 'react';
 
-class Square extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value : props.value,
-            dragging : false,
-            entered : false
-        };
-    }
-}
+export default function Square({color, children}) {
+    const fill = color ? 'black' : 'orange';
+    const stroke = color ? 'orange' : 'black';
 
-export default Square;
+    return (
+        <div
+            style={{
+                background: fill,
+                color: stroke,
+            }}
+        >
+            {children}
+        </div>
+    )
+}

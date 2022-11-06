@@ -16,6 +16,7 @@ import {
   import ExampleRun from "./ExampleRun";
   import Debug from "./Debug";
   import Chessboard from "./Chessboard";
+  import Simulation from "./Simulation";
 
 function NotFound() {
     return <h2>Not Found</h2>
@@ -32,6 +33,7 @@ class App extends React.Component {
                     <Route exact path="/examplerun" element={<ExampleRun />}/>
                     <Route exact path="/debug" element={<Debug />}/>
                     <Route exact path="/chessboard" element={<Chessboard />}/>
+                    <Route exact path="/simulation" element={<Simulation />}/>
                     <Route path="*" element={<NotFound />}/>
                     </Routes>
                 </div>

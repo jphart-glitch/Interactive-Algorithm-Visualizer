@@ -9,11 +9,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Board from "./Board";
-import {observe} from "./Game";
+import { observe } from "./Game";
 
 export default function Chessboard() 
 {
-    return (
+    observe((knightPosition) => 
+    {
+      return (
       <div>
         <h1>Chessboard Page</h1>
         <br />
@@ -28,4 +30,6 @@ export default function Chessboard()
         </div>
       </div>
     );
+    }
+    )
   };
