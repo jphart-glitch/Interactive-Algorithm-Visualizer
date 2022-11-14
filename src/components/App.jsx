@@ -15,8 +15,8 @@ import {
   import Interact from "./Interact";
   import ExampleRun from "./ExampleRun";
   import Debug from "./Debug";
-  import Chessboard from "./Chessboard";
-  import Simulation from "./Simulation";
+  import Chessboard from "./unused/Chessboard";
+  import Simulation from "./unused/Simulation";
   import GridArray from "./GridArray";
 
 function NotFound() {

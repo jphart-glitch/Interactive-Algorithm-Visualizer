@@ -14,13 +14,50 @@ import {
     swap
   } from "react-grid-dnd";
 
+var step = 0;
+
+function getStep() {
+  return step;
+}
+function incrementStep(maxSteps) {
+  if (step < maxSteps - 1) step += 1;
+}
+
 export default function GridArray() {
     const [items, setItems] = React.useState([4, 7, 5, 1, 8, 3, 2, 6]); // supply your own state
+    const states = [
+      [4, 7, 5, 1, 8, 3, 2, 6],
+      [4, 7, 1, 5, 8, 3, 2, 6],
+      [1, 4, 7, 5, 8, 3, 2, 6],
+      [1, 4, 5, 7, 8, 3, 2, 6],
+      [1, 4, 5, 7, 3, 8, 2, 6],
+      [1, 4, 5, 7, 2, 3, 8, 6],
+      [1, 4, 5, 7, 2, 3, 6, 8],
+      [1, 2, 4, 5, 7, 3, 6, 8],
+      [1, 2, 3, 4, 5, 7, 6, 8],
+      [1, 2, 3, 4, 5, 6, 7, 8]
+    ];
   
     // target id will only be set if dragging from one dropzone to another.
     function onChange(sourceId, sourceIndex, targetIndex, targetId) {
       const nextState = swap(items, sourceIndex, targetIndex);
-      setItems(nextState);
+      if (validState(nextState)) {
+        setItems(nextState);
+        incrementStep(states.length);
+      }
+    }
+
+    function validState(items) {
+      let correct = states[getStep()];
+      console.log(correct);
+      if (!(JSON.stringify(correct) === JSON.stringify(items))) {
+        console.log("Wrong!");
+        return false;
+      }
+      else {
+        console.log("Correct!");
+        return true;
+      }
     }
   
     return (
