@@ -13,7 +13,8 @@ export default function ArraySquare({index, children}) {
     const [{isOver}, drop] = useDrop(() => ({
         accept: ItemTypes.ELEMENT,
         drop: monitor => {
-            console.log('moving item: ', monitor.itemID.value)
+            console.log('moving item: ', monitor.itemID.value);
+            console.log('dropped into: ', {children}.children.props.value);
         },
         collect: monitor => ({
             isOver: !!monitor.isOver()

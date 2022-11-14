@@ -17,6 +17,7 @@ import {
   import Debug from "./Debug";
   import Chessboard from "./Chessboard";
   import Simulation from "./Simulation";
+  import GridArray from "./GridArray";
 
 function NotFound() {
     return <h2>Not Found</h2>
@@ -34,6 +35,7 @@ class App extends React.Component {
                     <Route exact path="/debug" element={<Debug />}/>
                     <Route exact path="/chessboard" element={<Chessboard />}/>
                     <Route exact path="/simulation" element={<Simulation />}/>
+                    <Route exact path="/mergesort" element={<GridArray />}/>
                     <Route path="*" element={<NotFound />}/>
                     </Routes>
                 </div>
