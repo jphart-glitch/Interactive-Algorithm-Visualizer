@@ -82,93 +82,98 @@ export default function GridArray() {
   
     return (
     <div>
-        <h1>Simulation of Merge Sort</h1>
+      <h1>Simulation of Merge Sort</h1>
+      <br />
+      <Link to="/">Go Back</Link>
+      <br />
+      <p textAlign="center">Destination Array</p>
+      <GridContextProvider onChange={onChange}>
+        <div className="row" style={{height: 100, borderStyle: "solid"}}>
+          <div className="col-sm container">
+          <GridDropZone
+              className="dropzone array"
+              id="array"
+              boxesPerRow={8}
+              rowHeight={70}
+            >
+              {items.array.map(item => (
+                <GridItem key={item.value}>
+                  <div
+                    style={{
+                      width: 100,
+                      backgroundColor: item.value % 2 === 1 ? "black" : "orange",
+                      color: item.value % 2 === 1 ? "orange" : "black",
+                      fontSize: 40,
+                      fontWeight: "bold",
+                      textAlign: "center",
+                      borderStyle: "solid",
+                      borderColor: "gray"
+                    }}
+                  >
+                    {item.value}
+                  </div>
+                </GridItem>
+              ))}
+            </GridDropZone>
+          </div>
+        </div>
         <br />
-        <Link to="/">Go Back</Link>
-        <GridContextProvider onChange={onChange}>
-          <div className="row" style={{height: 100}}>
-            <div className="col-sm container">
-              <p>Dropzone Array</p>
+      <p textAlign="center">Merging Array</p>
+        <div className="row" style={{height: 100, borderStyle: "solid"}}>
+          <div className="col-sm container">
+          <p>Dropzone Left</p>
             <GridDropZone
-                className="dropzone array"
-                id="array"
-                boxesPerRow={8}
-                rowHeight={70}
-              >
-                {items.array.map(item => (
-                  <GridItem key={item.value}>
-                    <div
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        backgroundColor: item.value % 2 === 1 ? "black" : "orange",
-                        color: item.value % 2 === 1 ? "orange" : "black",
-                        fontSize: 40,
-                        fontWeight: "bold"
-                      }}
-                    >
-                      {item.value}
-                    </div>
-                  </GridItem>
-                ))}
-              </GridDropZone>
-            </div>
+              className="dropzone left"
+              id="left"
+              boxesPerRow={4}
+              rowHeight={70}
+            >
+              {items.left.map(item => (
+                <GridItem key={item.value}>
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      backgroundColor: item.value % 2 === 1 ? "black" : "orange",
+                      color: item.value % 2 === 1 ? "orange" : "black",
+                      fontSize: 40,
+                      fontWeight: "bold"
+                    }}
+                  >
+                    {item.value}
+                  </div>
+                </GridItem>
+              ))}
+            </GridDropZone>
           </div>
-          <div className="row" style={{height: 100}}>
-            <div className="col-sm container">
-            <p>Dropzone Left</p>
-              <GridDropZone
-                className="dropzone left"
-                id="left"
-                boxesPerRow={4}
-                rowHeight={70}
-              >
-                {items.left.map(item => (
-                  <GridItem key={item.value}>
-                    <div
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        backgroundColor: item.value % 2 === 1 ? "black" : "orange",
-                        color: item.value % 2 === 1 ? "orange" : "black",
-                        fontSize: 40,
-                        fontWeight: "bold"
-                      }}
-                    >
-                      {item.value}
-                    </div>
-                  </GridItem>
-                ))}
-              </GridDropZone>
-            </div>
-            <div className="col-sm container">
-            <p>Dropzone Right</p>
-              <GridDropZone
-                className="dropzone right"
-                id="right"
-                boxesPerRow={4}
-                rowHeight={70}
-              >
-                {items.right.map(item => (
-                  <GridItem key={item.value}>
-                    <div
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        backgroundColor: item.value % 2 === 1 ? "black" : "orange",
-                        color: item.value % 2 === 1 ? "orange" : "black",
-                        fontSize: 40,
-                        fontWeight: "bold"
-                      }}
-                    >
-                      {item.value}
-                    </div>
-                  </GridItem>
-                ))}
-              </GridDropZone>
-            </div>
+          <div className="col-sm container">
+          <p>Dropzone Right</p>
+            <GridDropZone
+              className="dropzone right"
+              id="right"
+              boxesPerRow={4}
+              rowHeight={70}
+            >
+              {items.right.map(item => (
+                <GridItem key={item.value}>
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      backgroundColor: item.value % 2 === 1 ? "black" : "orange",
+                      color: item.value % 2 === 1 ? "orange" : "black",
+                      fontSize: 40,
+                      fontWeight: "bold"
+                    }}
+                  >
+                    {item.value}
+                  </div>
+                </GridItem>
+              ))}
+            </GridDropZone>
           </div>
-        </GridContextProvider>
+        </div>
+      </GridContextProvider>
       {/* <GridContextProvider onChange={onChange}>
         <GridDropZone
           id="items"
