@@ -38,6 +38,10 @@ const Home = () => {
           {/* Endpoint to route to Simulation component */}
           <Link to="/simulation">Merge Sort Simulation</Link>
         </li>
+        <li>
+          {/* Endpoint to route to GridArray component */}
+          <Link to="/mergesort">Grid Array Testing</Link>
+        </li>
       </ul>
     </div>
   );
