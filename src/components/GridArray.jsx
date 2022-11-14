@@ -11,8 +11,10 @@ import {
     GridContextProvider,
     GridDropZone,
     GridItem,
-    swap
+    swap,
+    move
   } from "react-grid-dnd";
+import { all_states } from "./States";
 
 var step = 0;
 
@@ -24,27 +26,45 @@ function incrementStep(maxSteps) {
 }
 
 export default function GridArray() {
-    const [items, setItems] = React.useState([4, 7, 5, 1, 8, 3, 2, 6]); // supply your own state
-    const states = [
-      [4, 7, 5, 1, 8, 3, 2, 6],
-      [4, 7, 1, 5, 8, 3, 2, 6],
-      [1, 4, 7, 5, 8, 3, 2, 6],
-      [1, 4, 5, 7, 8, 3, 2, 6],
-      [1, 4, 5, 7, 3, 8, 2, 6],
-      [1, 4, 5, 7, 2, 3, 8, 6],
-      [1, 4, 5, 7, 2, 3, 6, 8],
-      [1, 2, 4, 5, 7, 3, 6, 8],
-      [1, 2, 3, 4, 5, 7, 6, 8],
-      [1, 2, 3, 4, 5, 6, 7, 8]
-    ];
+    const [items, setItems] = React.useState({
+      array : [
+        {id: 1, value: 4},
+        {id: 2, value: 7},
+        {id: 3, value: 5},
+        {id: 4, value: 1},
+        {id: 5, value: 8},
+        {id: 6, value: 3},
+        {id: 7, value: 2},
+        {id: 8, value: 6}
+        ], // the final merged array
+      left : [], // the left-hand merging array
+      right : [] // the right-hand merging array
+    }); // supply your own state
+
+    const states = all_states.MERGESORT;
   
     // target id will only be set if dragging from one dropzone to another.
     function onChange(sourceId, sourceIndex, targetIndex, targetId) {
-      const nextState = swap(items, sourceIndex, targetIndex);
-      if (validState(nextState)) {
-        setItems(nextState);
-        incrementStep(states.length);
+      console.log(sourceId);
+      if (targetId) {
+        const result = move(
+          items[sourceId],
+          items[targetId],
+          sourceIndex,
+          targetIndex
+        );
+        return setItems({
+          ...items,
+          [sourceId]: result[0],
+          [targetId]: result[1]
+        });
       }
+  
+      const result = swap(items[sourceId], sourceIndex, targetIndex);
+      return setItems({
+        ...items,
+        [sourceId]: result
+      });
     }
 
     function validState(items) {
@@ -65,7 +85,91 @@ export default function GridArray() {
         <h1>Simulation of Merge Sort</h1>
         <br />
         <Link to="/">Go Back</Link>
-      <GridContextProvider onChange={onChange}>
+        <GridContextProvider onChange={onChange}>
+          <div className="row" style={{height: 100}}>
+            <div className="col-sm container">
+              <p>Dropzone Array</p>
+            <GridDropZone
+                className="dropzone array"
+                id="array"
+                boxesPerRow={8}
+                rowHeight={70}
+              >
+                {items.array.map(item => (
+                  <GridItem key={item.value}>
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        backgroundColor: item.value % 2 === 1 ? "black" : "orange",
+                        color: item.value % 2 === 1 ? "orange" : "black",
+                        fontSize: 40,
+                        fontWeight: "bold"
+                      }}
+                    >
+                      {item.value}
+                    </div>
+                  </GridItem>
+                ))}
+              </GridDropZone>
+            </div>
+          </div>
+          <div className="row" style={{height: 100}}>
+            <div className="col-sm container">
+            <p>Dropzone Left</p>
+              <GridDropZone
+                className="dropzone left"
+                id="left"
+                boxesPerRow={4}
+                rowHeight={70}
+              >
+                {items.left.map(item => (
+                  <GridItem key={item.value}>
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        backgroundColor: item.value % 2 === 1 ? "black" : "orange",
+                        color: item.value % 2 === 1 ? "orange" : "black",
+                        fontSize: 40,
+                        fontWeight: "bold"
+                      }}
+                    >
+                      {item.value}
+                    </div>
+                  </GridItem>
+                ))}
+              </GridDropZone>
+            </div>
+            <div className="col-sm container">
+            <p>Dropzone Right</p>
+              <GridDropZone
+                className="dropzone right"
+                id="right"
+                boxesPerRow={4}
+                rowHeight={70}
+              >
+                {items.right.map(item => (
+                  <GridItem key={item.value}>
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        backgroundColor: item.value % 2 === 1 ? "black" : "orange",
+                        color: item.value % 2 === 1 ? "orange" : "black",
+                        fontSize: 40,
+                        fontWeight: "bold"
+                      }}
+                    >
+                      {item.value}
+                    </div>
+                  </GridItem>
+                ))}
+              </GridDropZone>
+            </div>
+          </div>
+        </GridContextProvider>
+      {/* <GridContextProvider onChange={onChange}>
         <GridDropZone
           id="items"
           boxesPerRow={8}
@@ -89,7 +193,7 @@ export default function GridArray() {
             </GridItem>
           ))}
         </GridDropZone>
-      </GridContextProvider>
+      </GridContextProvider> */}
     </div>
     );
   }
