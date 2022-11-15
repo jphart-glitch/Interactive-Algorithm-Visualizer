@@ -4,8 +4,8 @@
 /* ------------------------------------------------------------------ */
 
 import React from "react";
-// importing Link from react-router-dom to navigate to 
-// different end points.
+/* importing Link from react-router-dom to navigate to 
+    different end points. */
 import { Link } from "react-router-dom";
 import {
     GridContextProvider,
