@@ -16,28 +16,20 @@ const Interact = () => {
         <ul>
           <li>
             {/* Endpoint to route to Home component */}
-            <Link to="/">Home</Link>
+            <Link to="/">Go Back</Link>
           </li>
           <li>
-            {/* Endpoint to route to Interact component */}
-            <Link to="/interact">Interact</Link>
+            {/* Endpoint to route to Mergesort component */}
+            <Link to="/mergesort">Merge Sort</Link>
           </li>
           <li>
-            {/* Endpoint to route to Example Run component */}
-            <Link to="/examplerun">Example Run</Link>
+            {/* Endpoint to route to Insertion Sort component */}
+            <Link to="/insertionsort">Insertion Sort</Link>
           </li>
           <li>
-            {/* Endpoint to route to Debug component */}
-            <Link to="/debug">Debug</Link>
+            {/* Endpoint to route to Selection Sort component */}
+            <Link to="/selectionsort">Selection Sort</Link>
           </li>
-          <li>
-            {/* Endpoint to route to Chessboard component */}
-            <Link to="/chessboard">Chessboard Example</Link>
-          </li>
-          <li>
-          {/* Endpoint to route to Simulation component */}
-          <Link to="/simulation">Merge Sort Simulation</Link>
-        </li>
         </ul>
       </div>
     );
