@@ -165,6 +165,10 @@ export const all_states = {
       ],
       SELECTIONSORT : [
         {
+          array : [4, 7, 5, 1, 8, 3, 2, 6],
+          temp : []
+        },
+        {
           array : [7, 5, 1, 8, 3, 2, 6],
           temp : [4]
         },

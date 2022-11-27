@@ -7,10 +7,12 @@ import React from "react";
 // importing Link from react-router-dom to navigate to 
 // different end points.
 import { Link } from "react-router-dom";
+
+import Container from 'react-bootstrap/Container';
   
 const Home = () => {
   return (
-    <div>
+    <Container fluid>
       <h1>Home Page</h1>
       <br />
       <ul>
@@ -31,7 +33,7 @@ const Home = () => {
           <Link to="/debug">Debug</Link>
         </li>
       </ul>
-    </div>
+    </Container>
   );
 };
   
