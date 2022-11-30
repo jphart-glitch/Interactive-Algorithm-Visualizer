@@ -23,6 +23,10 @@ import Simulation from "./unused/Simulation";
 import Mergesort from "./Mergesort";
 import InsertionSort from "./InsertionSort";
 import SelectionSort from './SelectionSort';
+import Stacks from './Stacks';
+import Queues from './Queues';
+import PriorityQueues from './PriorityQueues';
+import TwoThreeTrees from './TwoThreeTrees';
 
 function NotFound() {
     return <h2>Not Found</h2>
@@ -35,7 +39,7 @@ function WorkInProgess() {
 class App extends React.Component {
     render () {
         return (
-            <Container fluid style={{position: "fixed", width: "100%", height: "100%"}}>
+            <Container fluid style={{position: "fixed", width: "100%", height: "100%", backgroundColor: "gainsboro"}}>
                 <Router>
                     <AlgoActiveNavBar/>
                     <Container fluid>
@@ -50,10 +54,10 @@ class App extends React.Component {
                         <Route exact path="/insertionsort" element={<InsertionSort />}/>
                         <Route exact path="/mergesort" element={<Mergesort />}/>
                         <Route exact path="/quicksort" element={<WorkInProgess />}/>
-                        <Route exact path="/stacks" element={<WorkInProgess />}/>
-                        <Route exact path="/queues" element={<WorkInProgess />}/>
-                        <Route exact path="/priorityqueues" element={<WorkInProgess />}/>
-                        <Route exact path="/2-3-trees" element={<WorkInProgess />}/>
+                        <Route exact path="/stacks" element={<Stacks />}/>
+                        <Route exact path="/queues" element={<Queues />}/>
+                        <Route exact path="/priorityqueues" element={<PriorityQueues />}/>
+                        <Route exact path="/2-3-trees" element={<TwoThreeTrees />}/>
                         <Route exact path="/red-black-trees" element={<WorkInProgess />}/>
                         <Route exact path="/k-d-trees" element={<WorkInProgess />}/>
                         <Route exact path="/dfs" element={<WorkInProgess />}/>
