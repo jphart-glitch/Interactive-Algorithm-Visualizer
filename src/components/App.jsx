@@ -39,10 +39,11 @@ function WorkInProgess() {
 class App extends React.Component {
     render () {
         return (
-            <Container fluid style={{position: "fixed", width: "100%", height: "100%", backgroundColor: "gainsboro"}}>
+            <Container fluid style={{position: "fixed", width: "100%", height: "100%", backgroundColor: "gainsboro", 
+            paddingLeft: 0, paddingRight: 0 }}>
                 <Router>
                     <AlgoActiveNavBar/>
-                    <Container fluid>
+                    <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
                         <Routes>
                         <Route exact path="/" element={<Home />}/>
                         <Route exact path="/interact" element={<Interact />}/>
