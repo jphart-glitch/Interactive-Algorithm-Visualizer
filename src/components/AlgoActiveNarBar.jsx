@@ -11,9 +11,9 @@ import Nav from 'react-bootstrap/Nav'
 
 export default function AlgoActiveNavBar() {
     return (
-        <Container fluid>
+        <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
             <Navbar variant="dark" bg="dark" sticky="top">
-                <Container fluid>
+                <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
                     <Navbar.Brand href="/">
                         AlgoActive
                     </Navbar.Brand>

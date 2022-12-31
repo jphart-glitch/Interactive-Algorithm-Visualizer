@@ -12,7 +12,7 @@ import Container from 'react-bootstrap/Container';
   
 const Home = () => {
   return (
-    <Container fluid>
+    <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
       <h1>Home Page</h1>
       <br />
       <ul>
