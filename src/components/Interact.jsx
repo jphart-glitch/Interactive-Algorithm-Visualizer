@@ -16,11 +16,11 @@ import Row from 'react-bootstrap/Row';
 
 const Interact = () => {
     return (
-      <Container fluid>
+      <Container fluid style={{width: "100%", height: "100%"}}>
         <center><h1>Interact Page</h1></center>
         <Accordion alwaysOpen="true" style={{position: "absolute", width: "90%", height: "90%", 
-        paddingLeft: 0, paddingRight: 0, top: "7.5%", left: "5%"}}>
-          <Row xs={1} sm={2} style={{top: "0%", height: "50%"}}>
+        paddingLeft: 0, paddingRight: 0, left: "5%"}}>
+          <Row xs={1} sm={2}>
           {/* Classical Sorts */}
             <Col style={{paddingLeft: 0, paddingRight: 0}}>
               <Accordion.Item eventKey="0" style={{height: "100%"}}>
@@ -28,7 +28,7 @@ const Interact = () => {
                 <Accordion.Body>
                   <Container fluid>
                     <Row xs={1} sm={2} style={{paddingLeft: 0, paddingRight: 0}}>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>Selection Sort</Card.Title>
@@ -41,7 +41,7 @@ const Interact = () => {
                           </Card.Body>
                         </Card>
                       </Col>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>Insertion Sort</Card.Title>
@@ -56,7 +56,7 @@ const Interact = () => {
                       </Col>
                     </Row>
                     <Row xs={1} sm={2} style={{paddingLeft: 0, paddingRight: 0}}>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>Mergesort</Card.Title>
@@ -69,7 +69,7 @@ const Interact = () => {
                           </Card.Body>
                         </Card>
                       </Col>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>Quicksort</Card.Title>
@@ -94,7 +94,7 @@ const Interact = () => {
                 <Accordion.Body>
                   <Container fluid>
                     <Row xs={1} sm={2} style={{paddingLeft: 0, paddingRight: 0}}>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>Stack</Card.Title>
@@ -107,7 +107,7 @@ const Interact = () => {
                           </Card.Body>
                         </Card>
                       </Col>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>Queue</Card.Title>
@@ -122,7 +122,7 @@ const Interact = () => {
                       </Col>
                     </Row>
                     <Row xs={1} sm={2} style={{paddingLeft: 0, paddingRight: 0}}>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>Priority Queue</Card.Title>
@@ -141,7 +141,7 @@ const Interact = () => {
               </Accordion.Item>
             </Col>
           </Row>
-          <Row xs={1} sm={2} style={{top: "50%", height: "50%"}}>
+          <Row xs={1} sm={2}>
           {/* Balanced Search Trees */}
             <Col style={{paddingLeft: 0, paddingRight: 0}}>
               <Accordion.Item eventKey="2" style={{height: "100%"}}>
@@ -149,7 +149,7 @@ const Interact = () => {
                 <Accordion.Body>
                   <Container fluid>
                     <Row xs={1} sm={2} style={{paddingLeft: 0, paddingRight: 0}}>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>2-3 Trees</Card.Title>
@@ -162,7 +162,7 @@ const Interact = () => {
                           </Card.Body>
                         </Card>
                       </Col>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>Red-Black Trees</Card.Title>
@@ -177,7 +177,7 @@ const Interact = () => {
                       </Col>
                     </Row>
                     <Row xs={1} sm={2} style={{paddingLeft: 0, paddingRight: 0}}>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>K-D Trees</Card.Title>
@@ -202,7 +202,7 @@ const Interact = () => {
                 <Accordion.Body>
                   <Container fluid>
                     <Row xs={1} sm={2} style={{paddingLeft: 0, paddingRight: 0}}>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>Depth-First Search</Card.Title>
@@ -215,7 +215,7 @@ const Interact = () => {
                           </Card.Body>
                         </Card>
                       </Col>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>Breadth-First Search</Card.Title>
@@ -230,7 +230,7 @@ const Interact = () => {
                       </Col>
                     </Row>
                     <Row xs={1} sm={2} style={{paddingLeft: 0, paddingRight: 0}}>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>Minimum Spanning Trees</Card.Title>
@@ -243,7 +243,7 @@ const Interact = () => {
                           </Card.Body>
                         </Card>
                       </Col>
-                      <Col style={{display: "inline-block", float: "none", paddingLeft: 0, paddingRight: 0}}>
+                      <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
                             <Card.Title>Topological Sort</Card.Title>

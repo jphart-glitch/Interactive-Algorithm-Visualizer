@@ -111,15 +111,14 @@ function incrementStep(maxSteps) {
     }
   
     return (
-        <Container fluid style={{position: "absolute", width: "90%", height: "90%", 
-        paddingLeft: 0, paddingRight: 0, top: "5%", left: "5%"}}>
+        <Container fluid style={{width: "100%", height: "100%"}}>
             <h1>Simulation of Selection Sort</h1>
             <br />
             <Link to="/interact">Go Back</Link>
             <br />
             <GridContextProvider onChange={onChange}>
                 <center><p>Destination Array</p></center>
-                <Container fluid>
+                <Container fluid style={{width: "90%", height: "90%"}}>
                     <div className="row" style={{height: 200, paddingLeft: 0, paddingRight: 0}}>
                         <div className="col-sm container" style={{borderStyle: "solid"}}>
                             <p>Dropzone Main</p>
@@ -154,7 +153,7 @@ function incrementStep(maxSteps) {
                 </Container>
                 <br />
                 <center><p>Selection Array</p></center>
-                <Container fluid>
+                <Container fluid style={{width: "90%", height: "90%"}}>
                     <div className="row" style={{height: 200, paddingLeft: 0, paddingRight: 0}}>
                         <div className="col-sm container" style={{borderStyle: "solid"}}>
                             <p>Temp</p>
@@ -191,7 +190,7 @@ function incrementStep(maxSteps) {
             <br />
             <br />
 
-            <Container fluid>
+            <Container fluid style={{width: "90%", height: "90%"}}>
                 <center><Row xs={1} sm={3} style={{paddingLeft: 0, paddingRight: 0}}>
                     <Col>
                         <Button variant="secondary" size="lg" onClick={buttonPress}>

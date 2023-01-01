@@ -40,7 +40,7 @@ class App extends React.Component {
     render () {
         return (
             <Container fluid style={{position: "fixed", width: "100%", height: "100%", backgroundColor: "gainsboro", 
-            paddingLeft: 0, paddingRight: 0 }}>
+            paddingLeft: 0, paddingRight: 0, overflow: "auto"}}>
                 <Router>
                     <AlgoActiveNavBar/>
                     <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>

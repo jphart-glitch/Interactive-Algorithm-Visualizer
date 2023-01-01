@@ -113,14 +113,13 @@ function incrementStep(maxSteps) {
   }
   
     return (
-      <Container fluid style={{position: "absolute", width: "90%", height: "90%", 
-      paddingLeft: 0, paddingRight: 0, top: "5%", left: "5%"}}>
+      <Container fluid style={{width: "100%", height: "100%"}}>
         <h1>Simulation of Stacks</h1>
         <br />
         <Link to="/interact">Go Back</Link>
         <br />
         <GridContextProvider onChange={onChange}>
-            <Container fluid>
+            <Container fluid style={{width: "90%", height: "90%"}}>
                 <center><Row xs={1} sm={3}>
                     <Col>
                         <center><p>Input</p></center>
@@ -227,7 +226,7 @@ function incrementStep(maxSteps) {
         <br />
         <br />
 
-        <Container fluid>
+        <Container fluid style={{width: "90%", height: "90%"}}>
             <center><Row xs={1} sm={3} style={{paddingLeft: 0, paddingRight: 0}}>
                 <Col>
                     <Button variant="secondary" size="lg" onClick={buttonPress}>
