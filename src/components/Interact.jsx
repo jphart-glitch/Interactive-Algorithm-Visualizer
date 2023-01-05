@@ -72,7 +72,7 @@ const Interact = () => {
                       <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
-                            <Card.Title>Quicksort</Card.Title>
+                            <Card.Title>(UNDER DEVELOPMENT) Quicksort</Card.Title>
                             <Card.Text>
                               The most commonly used in-place sort, albeit with a bad worse-case!
                               <br />
@@ -165,7 +165,7 @@ const Interact = () => {
                       <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
-                            <Card.Title>Red-Black Trees</Card.Title>
+                            <Card.Title>(UNDER DEVELOPMENT) Red-Black Trees</Card.Title>
                             <Card.Text>
                               Binary search tree that leverages node coloring to provide improved amortized time operations!
                               <br />
@@ -180,7 +180,7 @@ const Interact = () => {
                       <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
-                            <Card.Title>K-D Trees</Card.Title>
+                            <Card.Title>(UNDER DEVELOPMENT) K-D Trees</Card.Title>
                             <Card.Text>
                               k-dimensional tree that can organize points in a k-dimensional space!
                               <br />
@@ -205,7 +205,7 @@ const Interact = () => {
                       <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
-                            <Card.Title>Depth-First Search</Card.Title>
+                            <Card.Title>(UNDER DEVELOPMENT) Depth-First Search</Card.Title>
                             <Card.Text>
                               Visit every edge and vertex by going as far as you can when you can!
                               <br />
@@ -218,7 +218,7 @@ const Interact = () => {
                       <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
-                            <Card.Title>Breadth-First Search</Card.Title>
+                            <Card.Title>(UNDER DEVELOPMENT) Breadth-First Search</Card.Title>
                             <Card.Text>
                               Visit all edges and vertices at a generational level before advancing!
                               <br />
@@ -233,7 +233,7 @@ const Interact = () => {
                       <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
-                            <Card.Title>Minimum Spanning Trees</Card.Title>
+                            <Card.Title>(UNDER DEVELOPMENT) Minimum Spanning Trees</Card.Title>
                             <Card.Text>
                               Find the minimum spanning tree (connected subgraph of minimum weights) of a graph!
                               <br />
@@ -246,7 +246,7 @@ const Interact = () => {
                       <Col style={{display: "block", float: "none", paddingLeft: 0, paddingRight: 0}}>
                         <Card className="text-center" style={{height: "100%"}}>
                           <Card.Body>
-                            <Card.Title>Topological Sort</Card.Title>
+                            <Card.Title>(UNDER DEVELOPMENT) Topological Sort</Card.Title>
                             <Card.Text>
                               Find an array of the vertices of a graph where each vertex is to the left of all the vertices it can point to!
                               <br />
