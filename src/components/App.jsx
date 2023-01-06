@@ -18,8 +18,6 @@ import Home from "./Home";
 import Interact from "./Interact";
 import ExampleRun from "./ExampleRun";
 import Debug from "./Debug";
-import Chessboard from "./unused/Chessboard";
-import Simulation from "./unused/Simulation";
 import Mergesort from "./Mergesort";
 import InsertionSort from "./InsertionSort";
 import SelectionSort from './SelectionSort';
@@ -27,6 +25,7 @@ import Stacks from './Stacks';
 import Queues from './Queues';
 import PriorityQueues from './PriorityQueues';
 import TwoThreeTrees from './TwoThreeTrees';
+import Evaluation from './Evaluation';
 
 function NotFound() {
     return <h2>Not Found</h2>
@@ -47,10 +46,8 @@ class App extends React.Component {
                         <Routes>
                         <Route exact path="/" element={<Home />}/>
                         <Route exact path="/interact" element={<Interact />}/>
-                        <Route exact path="/examplerun" element={<ExampleRun />}/>
-                        <Route exact path="/debug" element={<Debug />}/>
-                        <Route exact path="/chessboard" element={<Chessboard />}/>
-                        <Route exact path="/simulation" element={<Simulation />}/>
+                        <Route exact path="/examplerun" element={<WorkInProgess />}/>
+                        <Route exact path="/debug" element={<WorkInProgess />}/>
                         <Route exact path="/selectionsort" element={<SelectionSort />}/>
                         <Route exact path="/insertionsort" element={<InsertionSort />}/>
                         <Route exact path="/mergesort" element={<Mergesort />}/>
@@ -65,6 +62,7 @@ class App extends React.Component {
                         <Route exact path="/bfs" element={<WorkInProgess />}/>
                         <Route exact path="/msts" element={<WorkInProgess />}/>
                         <Route exact path="/topologicalsort" element={<WorkInProgess />}/>
+                        <Route exact path="/evaluation" element={<Evaluation />}/>
                         <Route path="*" element={<NotFound />}/>
                         </Routes>
                     </Container>
