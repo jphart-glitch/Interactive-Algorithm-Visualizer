@@ -445,12 +445,12 @@ export const all_states = {
         }, step : "Enqueue 8." },
         { answer : {
           input : [3, 5, 7],
-          stack : [8, 6, 4],
+          stack : [6, 8, 4],
           output : [1, 2]
         }, step : "Enqueue 6." },
         { answer : {
           input : [3, 5, 7],
-          stack : [8, 6],
+          stack : [6, 8],
           output : [1, 2, 4]
         }, step : "Extract minimum." },
         { answer : {
@@ -460,7 +460,7 @@ export const all_states = {
         }, step : "Extract minimum." },
         { answer : {
           input : [3, 7],
-          stack : [8, 5],
+          stack : [5, 8],
           output : [1, 2, 4, 6]
         }, step : "Enqueue 5." },
         { answer : {

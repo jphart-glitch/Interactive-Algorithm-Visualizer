@@ -107,94 +107,104 @@ function incrementStep(maxSteps) {
           });
       }
   }
+
+    const [overlayVisibility, setOverlayVisibility] = React.useState("block");
   
     return (
-      <Container fluid style={{width: "100%", height: "100%"}}>
-        <h1>Simulation of Insertion Sort</h1>
-        <br />
-        <Link to="/interact">Go Back</Link>
-        <br />
-        <GridContextProvider onChange={onChange}>
-          <center><p>Destination Array</p></center>
-          <Container fluid style={{width: "90%", height: "90%"}}>
-            <div className="row" style={{height: 200, paddingLeft: 0, paddingRight: 0}}>
-                <div className="col-sm container" style={{borderStyle: "solid"}}>
-                    <p>Dropzone Main</p>
-                    <GridDropZone
-                    id="array"
-                    boxesPerRow={8}
-                    rowHeight={100}
-                    style={{ height: "100%" }}
-                    >
-                    {items.array.map(item => (
-                        <GridItem key={item}>
-                        <div
-                            style={{
-                                width: 100,
-                                backgroundColor: item % 2 === 1 ? "black" : "orange",
-                                color: item % 2 === 1 ? "orange" : "black",
-                                fontSize: 40,
-                                fontWeight: "bold",
-                                textAlign: "center",
-                                borderStyle: "solid",
-                                borderColor: "gray",
-                                userSelect: "none"
-                            }}
-                            >
-                            {item}
-                        </div>
-                        </GridItem>
-                    ))}
-                    </GridDropZone>
-                </div>
-            </div>
+        <div>
+            <Container fluid style={{position: "absolute", display: overlayVisibility, width:"100%", height:"100%",
+            backgroundColor: "rgba(0, 0, 0, 0.5)", zIndex: "2", cursor: "pointer", userSelect: "none"}}>
+                <br/>
+                <center><p style={{fontSize: "50px", color: "white", backgroundColor: "rgba(0, 0, 0, 0.75)"}}>
+                    Hello, user, and welcome to AlgoActive's Insertion Sort Interact Page!
+                </p></center>
+                <center><p style={{fontSize: "30px", color: "white", backgroundColor: "rgba(0, 0, 0, 0.75)", whiteSpace: "pre-wrap"}}>
+                    {instructions}
+                </p></center>
+                <center><Button onClick={() => setOverlayVisibility("none")}>
+                    Click here to continue!
+                </Button></center>
             </Container>
-        </GridContextProvider>
-        <br />
-        <br />
+        <Container fluid style={{width: "100%", height: "100%"}}>
+            <h1>Simulation of Insertion Sort</h1>
+            <br />
+            <Link to="/interact">Go Back</Link>
+            <br />
+            <GridContextProvider onChange={onChange}>
+            <center><p>Destination Array</p></center>
+            <Container fluid style={{width: "90%", height: "90%"}}>
+                <div className="row" style={{height: 200, paddingLeft: 0, paddingRight: 0}}>
+                    <div className="col-sm container" style={{borderStyle: "solid"}}>
+                        <p>Dropzone Main</p>
+                        <GridDropZone
+                        id="array"
+                        boxesPerRow={8}
+                        rowHeight={100}
+                        style={{ height: "100%" }}
+                        >
+                        {items.array.map(item => (
+                            <GridItem key={item}>
+                            <div
+                                style={{
+                                    width: 100,
+                                    backgroundColor: item % 2 === 1 ? "black" : "orange",
+                                    color: item % 2 === 1 ? "orange" : "black",
+                                    fontSize: 40,
+                                    fontWeight: "bold",
+                                    textAlign: "center",
+                                    borderStyle: "solid",
+                                    borderColor: "gray",
+                                    userSelect: "none"
+                                }}
+                                >
+                                {item}
+                            </div>
+                            </GridItem>
+                        ))}
+                        </GridDropZone>
+                    </div>
+                </div>
+                </Container>
+            </GridContextProvider>
+            <br />
+            <br />
 
-        <Container fluid style={{width: "90%", height: "90%"}}>
-            <center><Row xs={1} sm={3}>
-                <Col>
-                    <Button variant="secondary" size="lg" onClick={buttonPress}>
-                        Click here to check your state!
-                    </Button>
-                </Col>
-                <Col>
-                    <OverlayTrigger trigger="click" placement="bottom" overlay={
-                        <Popover id="instructions">
-                            <Popover.Header as="h3">Instructions</Popover.Header>
-                            <Popover.Body>{instructions}</Popover.Body>
-                        </Popover>
-                        }>
-                        <Button variant="primary" size="lg">Toggle to see the instructions!</Button>
-                    </OverlayTrigger>
-                </Col>
-                <Col>
-                    <OverlayTrigger trigger="click" placement="left" overlay={
-                        <Popover id="step">
-                            <Popover.Header as="h3">Previous Step (Step #{currStep.stepNum})</Popover.Header>
-                            <Popover.Body>{currStep.text}</Popover.Body>
-                        </Popover>
-                        }>
-                        <Button variant="success" size="lg">Toggle to see the previous step you took!</Button>
-                    </OverlayTrigger>
-                </Col>
-            </Row></center>
+            <Container fluid style={{width: "90%", height: "90%"}}>
+                <center><Row xs={1} sm={3}>
+                    <Col>
+                        <Button variant="secondary" size="lg" onClick={buttonPress}>
+                            Click here to check your state!
+                        </Button>
+                    </Col>
+                    <Col>
+                        <Button onClick={() => setOverlayVisibility("block")}>Toggle Instructions</Button>
+                    </Col>
+                    <Col>
+                        <OverlayTrigger trigger="click" placement="left" overlay={
+                            <Popover id="step">
+                                <Popover.Header as="h3">Previous Step (Step #{currStep.stepNum})</Popover.Header>
+                                <Popover.Body>{currStep.text}</Popover.Body>
+                            </Popover>
+                            }>
+                            <Button variant="success" size="lg">Toggle to see the previous step you took!</Button>
+                        </OverlayTrigger>
+                    </Col>
+                </Row></center>
+            </Container>
+
+            <Alert variant="success" onClose={() => setVisibility({...currVisibility, correct : hidden})} dismissible style={{visibility: currVisibility.correct, position: "absolute"}}>
+                <Alert.Heading>Nice job!</Alert.Heading>
+                <p>
+                    Now continue onto the next step!
+                </p>
+            </Alert>
+            <Alert variant="danger" onClose={() => setVisibility({...currVisibility, incorrect : hidden})} dismissible style={{visibility: currVisibility.incorrect, position: "absolute"}}>
+                <Alert.Heading>Not quite right!</Alert.Heading>
+                <p>
+                    Maybe try something different...
+                </p>
+            </Alert>
         </Container>
-
-        <Alert variant="success" onClose={() => setVisibility({...currVisibility, correct : hidden})} dismissible style={{visibility: currVisibility.correct, position: "absolute"}}>
-            <Alert.Heading>Nice job!</Alert.Heading>
-            <p>
-                Now continue onto the next step!
-            </p>
-        </Alert>
-        <Alert variant="danger" onClose={() => setVisibility({...currVisibility, incorrect : hidden})} dismissible style={{visibility: currVisibility.incorrect, position: "absolute"}}>
-            <Alert.Heading>Not quite right!</Alert.Heading>
-            <p>
-                Maybe try something different...
-            </p>
-        </Alert>
-      </Container>      
+    </div>
     );
   }

@@ -128,443 +128,453 @@ function incrementStep(maxSteps) {
         }
     }
   
+    const [overlayVisibility, setOverlayVisibility] = React.useState("block");
+
     return (
-        <Container fluid style={{width: "100%", height: "100%"}}>
-            <h1>Simulation of 2-3 Trees</h1>
-            <br />
-            <Link to="/interact">Go Back</Link>
-            <br />
-            <GridContextProvider onChange={onChange}>
-                <center><p>Root</p></center>
-                <Container fluid style={{width: "90%", height: "90%"}}>
-                    <Row xs={1} sm={1}>
-                        <Col>
-                            <center><div className="row" style={{width: 200, height: 100}}>
-                                <div className="col-sm container" style={{borderStyle: "solid"}}>
-                                    <center><p>Root Node</p></center>
-                                    <GridDropZone
-                                    id="array"
-                                    boxesPerRow={2}
-                                    rowHeight={100}
-                                    style={{ height: "100%" }}
-                                    >
-                                    {items.root.map(item => (
-                                        <GridItem key={item}>
-                                        <div
-                                            style={{
-                                                width: 100,
-                                                backgroundColor: item % 2 === 1 ? "black" : "orange",
-                                                color: item % 2 === 1 ? "orange" : "black",
-                                                fontSize: 40,
-                                                fontWeight: "bold",
-                                                textAlign: "center",
-                                                borderStyle: "solid",
-                                                borderColor: "gray",
-                                                userSelect: "none"
-                                            }}
-                                            >
-                                            {item}
-                                        </div>
-                                        </GridItem>
-                                    ))}
-                                    </GridDropZone>
-                                </div>
-                            </div></center>
-                        </Col>
-                    </Row>
-                </Container>
-                <hr />
-                <center><p>Level One</p></center>
-                <Container fluid style={{width: "90%", height: "90%"}}>
-                    <Row xs={1} sm={3}>
-                        <Col>
-                            <center><div className="row" style={{width: 200, height: 100}}>
-                                <div className="col-sm container" style={{borderStyle: "solid"}}>
-                                    <center><p>One</p></center>
-                                    <GridDropZone
-                                    id="array"
-                                    boxesPerRow={2}
-                                    rowHeight={100}
-                                    style={{ height: "100%" }}
-                                    >
-                                    {items.levelOneLeftOne.map(item => (
-                                        <GridItem key={item}>
-                                        <div
-                                            style={{
-                                                width: 100,
-                                                backgroundColor: item % 2 === 1 ? "black" : "orange",
-                                                color: item % 2 === 1 ? "orange" : "black",
-                                                fontSize: 40,
-                                                fontWeight: "bold",
-                                                textAlign: "center",
-                                                borderStyle: "solid",
-                                                borderColor: "gray",
-                                                userSelect: "none"
-                                            }}
-                                            >
-                                            {item}
-                                        </div>
-                                        </GridItem>
-                                    ))}
-                                    </GridDropZone>
-                                </div>
-                            </div></center>
-                        </Col>
-                        <Col>
-                            <center><div className="row" style={{width: 200, height: 100}}>
-                                <div className="col-sm container" style={{borderStyle: "solid"}}>
-                                    <center><p>Two</p></center>
-                                    <GridDropZone
-                                    id="array"
-                                    boxesPerRow={2}
-                                    rowHeight={100}
-                                    style={{ height: "100%" }}
-                                    >
-                                    {items.levelOneLeftTwo.map(item => (
-                                        <GridItem key={item}>
-                                        <div
-                                            style={{
-                                                width: 100,
-                                                backgroundColor: item % 2 === 1 ? "black" : "orange",
-                                                color: item % 2 === 1 ? "orange" : "black",
-                                                fontSize: 40,
-                                                fontWeight: "bold",
-                                                textAlign: "center",
-                                                borderStyle: "solid",
-                                                borderColor: "gray",
-                                                userSelect: "none"
-                                            }}
-                                            >
-                                            {item}
-                                        </div>
-                                        </GridItem>
-                                    ))}
-                                    </GridDropZone>
-                                </div>
-                            </div></center>
-                        </Col>
-                        <Col>
-                            <center><div className="row" style={{width: 200, height: 100}}>
-                                <div className="col-sm container" style={{borderStyle: "solid"}}>
-                                    <center><p>Three</p></center>
-                                    <GridDropZone
-                                    id="array"
-                                    boxesPerRow={2}
-                                    rowHeight={100}
-                                    style={{ height: "100%" }}
-                                    >
-                                    {items.levelOneLeftThree.map(item => (
-                                        <GridItem key={item}>
-                                        <div
-                                            style={{
-                                                width: 100,
-                                                backgroundColor: item % 2 === 1 ? "black" : "orange",
-                                                color: item % 2 === 1 ? "orange" : "black",
-                                                fontSize: 40,
-                                                fontWeight: "bold",
-                                                textAlign: "center",
-                                                borderStyle: "solid",
-                                                borderColor: "gray",
-                                                userSelect: "none"
-                                            }}
-                                            >
-                                            {item}
-                                        </div>
-                                        </GridItem>
-                                    ))}
-                                    </GridDropZone>
-                                </div>
-                            </div></center>
-                        </Col>
-                    </Row>
-                </Container>
-                <hr />
-                <center><p>Level Two</p></center>
-                <Container fluid style={{width: "90%", height: "90%"}}>
-                    <Row xs={2} sm={6}>
-                        <Col>
-                            <center><div className="row" style={{width: 200, height: 100}}>
-                                <div className="col-sm container" style={{borderStyle: "solid"}}>
-                                    <center><p>One</p></center>
-                                    <GridDropZone
-                                    id="array"
-                                    boxesPerRow={2}
-                                    rowHeight={100}
-                                    style={{ height: "100%" }}
-                                    >
-                                    {items.levelTwoLeftOne.map(item => (
-                                        <GridItem key={item}>
-                                        <div
-                                            style={{
-                                                width: 100,
-                                                backgroundColor: item % 2 === 1 ? "black" : "orange",
-                                                color: item % 2 === 1 ? "orange" : "black",
-                                                fontSize: 40,
-                                                fontWeight: "bold",
-                                                textAlign: "center",
-                                                borderStyle: "solid",
-                                                borderColor: "gray",
-                                                userSelect: "none"
-                                            }}
-                                            >
-                                            {item}
-                                        </div>
-                                        </GridItem>
-                                    ))}
-                                    </GridDropZone>
-                                </div>
-                            </div></center>
-                        </Col>
-                        <Col>
-                            <center><div className="row" style={{width: 200, height: 100}}>
-                                <div className="col-sm container" style={{borderStyle: "solid"}}>
-                                    <center><p>Two</p></center>
-                                    <GridDropZone
-                                    id="array"
-                                    boxesPerRow={2}
-                                    rowHeight={100}
-                                    style={{ height: "100%" }}
-                                    >
-                                    {items.levelTwoLeftTwo.map(item => (
-                                        <GridItem key={item}>
-                                        <div
-                                            style={{
-                                                width: 100,
-                                                backgroundColor: item % 2 === 1 ? "black" : "orange",
-                                                color: item % 2 === 1 ? "orange" : "black",
-                                                fontSize: 40,
-                                                fontWeight: "bold",
-                                                textAlign: "center",
-                                                borderStyle: "solid",
-                                                borderColor: "gray",
-                                                userSelect: "none"
-                                            }}
-                                            >
-                                            {item}
-                                        </div>
-                                        </GridItem>
-                                    ))}
-                                    </GridDropZone>
-                                </div>
-                            </div></center>
-                        </Col>
-                        <Col>
-                            <center><div className="row" style={{width: 200, height: 100}}>
-                                <div className="col-sm container" style={{borderStyle: "solid"}}>
-                                    <center><p>Three</p></center>
-                                    <GridDropZone
-                                    id="array"
-                                    boxesPerRow={2}
-                                    rowHeight={100}
-                                    style={{ height: "100%" }}
-                                    >
-                                    {items.levelTwoLeftThree.map(item => (
-                                        <GridItem key={item}>
-                                        <div
-                                            style={{
-                                                width: 100,
-                                                backgroundColor: item % 2 === 1 ? "black" : "orange",
-                                                color: item % 2 === 1 ? "orange" : "black",
-                                                fontSize: 40,
-                                                fontWeight: "bold",
-                                                textAlign: "center",
-                                                borderStyle: "solid",
-                                                borderColor: "gray",
-                                                userSelect: "none"
-                                            }}
-                                            >
-                                            {item}
-                                        </div>
-                                        </GridItem>
-                                    ))}
-                                    </GridDropZone>
-                                </div>
-                            </div></center>
-                        </Col>
-                        <Col>
-                            <center><div className="row" style={{width: 200, height: 100}}>
-                                <div className="col-sm container" style={{borderStyle: "solid"}}>
-                                    <center><p>Four</p></center>
-                                    <GridDropZone
-                                    id="array"
-                                    boxesPerRow={2}
-                                    rowHeight={100}
-                                    style={{ height: "100%" }}
-                                    >
-                                    {items.levelTwoLeftFour.map(item => (
-                                        <GridItem key={item}>
-                                        <div
-                                            style={{
-                                                width: 100,
-                                                backgroundColor: item % 2 === 1 ? "black" : "orange",
-                                                color: item % 2 === 1 ? "orange" : "black",
-                                                fontSize: 40,
-                                                fontWeight: "bold",
-                                                textAlign: "center",
-                                                borderStyle: "solid",
-                                                borderColor: "gray",
-                                                userSelect: "none"
-                                            }}
-                                            >
-                                            {item}
-                                        </div>
-                                        </GridItem>
-                                    ))}
-                                    </GridDropZone>
-                                </div>
-                            </div></center>
-                        </Col>
-                        <Col>
-                            <center><div className="row" style={{width: 200, height: 100}}>
-                                <div className="col-sm container" style={{borderStyle: "solid"}}>
-                                    <center><p>Five</p></center>
-                                    <GridDropZone
-                                    id="array"
-                                    boxesPerRow={2}
-                                    rowHeight={100}
-                                    style={{ height: "100%" }}
-                                    >
-                                    {items.levelTwoLeftFive.map(item => (
-                                        <GridItem key={item}>
-                                        <div
-                                            style={{
-                                                width: 100,
-                                                backgroundColor: item % 2 === 1 ? "black" : "orange",
-                                                color: item % 2 === 1 ? "orange" : "black",
-                                                fontSize: 40,
-                                                fontWeight: "bold",
-                                                textAlign: "center",
-                                                borderStyle: "solid",
-                                                borderColor: "gray",
-                                                userSelect: "none"
-                                            }}
-                                            >
-                                            {item}
-                                        </div>
-                                        </GridItem>
-                                    ))}
-                                    </GridDropZone>
-                                </div>
-                            </div></center>
-                        </Col>
-                        <Col>
-                            <center><div className="row" style={{width: 200, height: 100}}>
-                                <div className="col-sm container" style={{borderStyle: "solid"}}>
-                                    <center><p>Six</p></center>
-                                    <GridDropZone
-                                    id="array"
-                                    boxesPerRow={2}
-                                    rowHeight={100}
-                                    style={{ height: "100%" }}
-                                    >
-                                    {items.levelTwoLeftSix.map(item => (
-                                        <GridItem key={item}>
-                                        <div
-                                            style={{
-                                                width: 100,
-                                                backgroundColor: item % 2 === 1 ? "black" : "orange",
-                                                color: item % 2 === 1 ? "orange" : "black",
-                                                fontSize: 40,
-                                                fontWeight: "bold",
-                                                textAlign: "center",
-                                                borderStyle: "solid",
-                                                borderColor: "gray",
-                                                userSelect: "none"
-                                            }}
-                                            >
-                                            {item}
-                                        </div>
-                                        </GridItem>
-                                    ))}
-                                    </GridDropZone>
-                                </div>
-                            </div></center>
-                        </Col>
-                    </Row>
-                </Container>
-                <hr />
-                <center><p>Input</p></center>
-                <Container fluid style={{width: "90%", height: "90%"}}>
-                    <Row xs={1} sm={1}>
-                        <Col>
-                            <center><div className="row" style={{width: 800, height: 200}}>
-                                <div className="col-sm container" style={{borderStyle: "solid"}}>
-                                    <center><p>Input</p></center>
-                                    <GridDropZone
-                                    id="array"
-                                    boxesPerRow={8}
-                                    rowHeight={100}
-                                    style={{ height: "100%" }}
-                                    >
-                                    {items.input.map(item => (
-                                        <GridItem key={item}>
-                                        <div
-                                            style={{
-                                                width: 100,
-                                                backgroundColor: item % 2 === 1 ? "black" : "orange",
-                                                color: item % 2 === 1 ? "orange" : "black",
-                                                fontSize: 40,
-                                                fontWeight: "bold",
-                                                textAlign: "center",
-                                                borderStyle: "solid",
-                                                borderColor: "gray",
-                                                userSelect: "none"
-                                            }}
-                                            >
-                                            {item}
-                                        </div>
-                                        </GridItem>
-                                    ))}
-                                    </GridDropZone>
-                                </div>
-                            </div></center>
-                        </Col>
-                    </Row>
-                </Container>
-            </GridContextProvider>
-            <br />
-            <br />
+        <div>
+            <Container fluid style={{position: "absolute", display: overlayVisibility, width:"100%", height:"100%",
+            backgroundColor: "rgba(0, 0, 0, 0.5)", zIndex: "2", cursor: "pointer", userSelect: "none"}}>
+                <br/>
+                <center><p style={{fontSize: "50px", color: "white", backgroundColor: "rgba(0, 0, 0, 0.75)"}}>
+                    Hello, user, and welcome to AlgoActive's 2-3 Trees Interact Page!
+                </p></center>
+                <center><p style={{fontSize: "30px", color: "white", backgroundColor: "rgba(0, 0, 0, 0.75)", whiteSpace: "pre-wrap"}}>
+                    {instructions}
+                </p></center>
+                <center><Button onClick={() => setOverlayVisibility("none")}>
+                    Click here to continue!
+                </Button></center>
+            </Container>
+            <Container fluid style={{width: "100%", height: "100%"}}>
+                <h1>Simulation of 2-3 Trees</h1>
+                <br />
+                <Link to="/interact">Go Back</Link>
+                <br />
+                <GridContextProvider onChange={onChange}>
+                    <center><p>Root</p></center>
+                    <Container fluid style={{width: "90%", height: "90%"}}>
+                        <Row xs={1} sm={1}>
+                            <Col>
+                                <center><div className="row" style={{width: 200, height: 100}}>
+                                    <div className="col-sm container" style={{borderStyle: "solid"}}>
+                                        <center><p>Root Node</p></center>
+                                        <GridDropZone
+                                        id="array"
+                                        boxesPerRow={2}
+                                        rowHeight={100}
+                                        style={{ height: "100%" }}
+                                        >
+                                        {items.root.map(item => (
+                                            <GridItem key={item}>
+                                            <div
+                                                style={{
+                                                    width: 100,
+                                                    backgroundColor: item % 2 === 1 ? "black" : "orange",
+                                                    color: item % 2 === 1 ? "orange" : "black",
+                                                    fontSize: 40,
+                                                    fontWeight: "bold",
+                                                    textAlign: "center",
+                                                    borderStyle: "solid",
+                                                    borderColor: "gray",
+                                                    userSelect: "none"
+                                                }}
+                                                >
+                                                {item}
+                                            </div>
+                                            </GridItem>
+                                        ))}
+                                        </GridDropZone>
+                                    </div>
+                                </div></center>
+                            </Col>
+                        </Row>
+                    </Container>
+                    <hr />
+                    <center><p>Level One</p></center>
+                    <Container fluid style={{width: "90%", height: "90%"}}>
+                        <Row xs={1} sm={3}>
+                            <Col>
+                                <center><div className="row" style={{width: 200, height: 100}}>
+                                    <div className="col-sm container" style={{borderStyle: "solid"}}>
+                                        <center><p>One</p></center>
+                                        <GridDropZone
+                                        id="array"
+                                        boxesPerRow={2}
+                                        rowHeight={100}
+                                        style={{ height: "100%" }}
+                                        >
+                                        {items.levelOneLeftOne.map(item => (
+                                            <GridItem key={item}>
+                                            <div
+                                                style={{
+                                                    width: 100,
+                                                    backgroundColor: item % 2 === 1 ? "black" : "orange",
+                                                    color: item % 2 === 1 ? "orange" : "black",
+                                                    fontSize: 40,
+                                                    fontWeight: "bold",
+                                                    textAlign: "center",
+                                                    borderStyle: "solid",
+                                                    borderColor: "gray",
+                                                    userSelect: "none"
+                                                }}
+                                                >
+                                                {item}
+                                            </div>
+                                            </GridItem>
+                                        ))}
+                                        </GridDropZone>
+                                    </div>
+                                </div></center>
+                            </Col>
+                            <Col>
+                                <center><div className="row" style={{width: 200, height: 100}}>
+                                    <div className="col-sm container" style={{borderStyle: "solid"}}>
+                                        <center><p>Two</p></center>
+                                        <GridDropZone
+                                        id="array"
+                                        boxesPerRow={2}
+                                        rowHeight={100}
+                                        style={{ height: "100%" }}
+                                        >
+                                        {items.levelOneLeftTwo.map(item => (
+                                            <GridItem key={item}>
+                                            <div
+                                                style={{
+                                                    width: 100,
+                                                    backgroundColor: item % 2 === 1 ? "black" : "orange",
+                                                    color: item % 2 === 1 ? "orange" : "black",
+                                                    fontSize: 40,
+                                                    fontWeight: "bold",
+                                                    textAlign: "center",
+                                                    borderStyle: "solid",
+                                                    borderColor: "gray",
+                                                    userSelect: "none"
+                                                }}
+                                                >
+                                                {item}
+                                            </div>
+                                            </GridItem>
+                                        ))}
+                                        </GridDropZone>
+                                    </div>
+                                </div></center>
+                            </Col>
+                            <Col>
+                                <center><div className="row" style={{width: 200, height: 100}}>
+                                    <div className="col-sm container" style={{borderStyle: "solid"}}>
+                                        <center><p>Three</p></center>
+                                        <GridDropZone
+                                        id="array"
+                                        boxesPerRow={2}
+                                        rowHeight={100}
+                                        style={{ height: "100%" }}
+                                        >
+                                        {items.levelOneLeftThree.map(item => (
+                                            <GridItem key={item}>
+                                            <div
+                                                style={{
+                                                    width: 100,
+                                                    backgroundColor: item % 2 === 1 ? "black" : "orange",
+                                                    color: item % 2 === 1 ? "orange" : "black",
+                                                    fontSize: 40,
+                                                    fontWeight: "bold",
+                                                    textAlign: "center",
+                                                    borderStyle: "solid",
+                                                    borderColor: "gray",
+                                                    userSelect: "none"
+                                                }}
+                                                >
+                                                {item}
+                                            </div>
+                                            </GridItem>
+                                        ))}
+                                        </GridDropZone>
+                                    </div>
+                                </div></center>
+                            </Col>
+                        </Row>
+                    </Container>
+                    <hr />
+                    <center><p>Level Two</p></center>
+                    <Container fluid style={{width: "90%", height: "90%"}}>
+                        <Row xs={2} sm={6}>
+                            <Col>
+                                <center><div className="row" style={{width: 200, height: 100}}>
+                                    <div className="col-sm container" style={{borderStyle: "solid"}}>
+                                        <center><p>One</p></center>
+                                        <GridDropZone
+                                        id="array"
+                                        boxesPerRow={2}
+                                        rowHeight={100}
+                                        style={{ height: "100%" }}
+                                        >
+                                        {items.levelTwoLeftOne.map(item => (
+                                            <GridItem key={item}>
+                                            <div
+                                                style={{
+                                                    width: 100,
+                                                    backgroundColor: item % 2 === 1 ? "black" : "orange",
+                                                    color: item % 2 === 1 ? "orange" : "black",
+                                                    fontSize: 40,
+                                                    fontWeight: "bold",
+                                                    textAlign: "center",
+                                                    borderStyle: "solid",
+                                                    borderColor: "gray",
+                                                    userSelect: "none"
+                                                }}
+                                                >
+                                                {item}
+                                            </div>
+                                            </GridItem>
+                                        ))}
+                                        </GridDropZone>
+                                    </div>
+                                </div></center>
+                            </Col>
+                            <Col>
+                                <center><div className="row" style={{width: 200, height: 100}}>
+                                    <div className="col-sm container" style={{borderStyle: "solid"}}>
+                                        <center><p>Two</p></center>
+                                        <GridDropZone
+                                        id="array"
+                                        boxesPerRow={2}
+                                        rowHeight={100}
+                                        style={{ height: "100%" }}
+                                        >
+                                        {items.levelTwoLeftTwo.map(item => (
+                                            <GridItem key={item}>
+                                            <div
+                                                style={{
+                                                    width: 100,
+                                                    backgroundColor: item % 2 === 1 ? "black" : "orange",
+                                                    color: item % 2 === 1 ? "orange" : "black",
+                                                    fontSize: 40,
+                                                    fontWeight: "bold",
+                                                    textAlign: "center",
+                                                    borderStyle: "solid",
+                                                    borderColor: "gray",
+                                                    userSelect: "none"
+                                                }}
+                                                >
+                                                {item}
+                                            </div>
+                                            </GridItem>
+                                        ))}
+                                        </GridDropZone>
+                                    </div>
+                                </div></center>
+                            </Col>
+                            <Col>
+                                <center><div className="row" style={{width: 200, height: 100}}>
+                                    <div className="col-sm container" style={{borderStyle: "solid"}}>
+                                        <center><p>Three</p></center>
+                                        <GridDropZone
+                                        id="array"
+                                        boxesPerRow={2}
+                                        rowHeight={100}
+                                        style={{ height: "100%" }}
+                                        >
+                                        {items.levelTwoLeftThree.map(item => (
+                                            <GridItem key={item}>
+                                            <div
+                                                style={{
+                                                    width: 100,
+                                                    backgroundColor: item % 2 === 1 ? "black" : "orange",
+                                                    color: item % 2 === 1 ? "orange" : "black",
+                                                    fontSize: 40,
+                                                    fontWeight: "bold",
+                                                    textAlign: "center",
+                                                    borderStyle: "solid",
+                                                    borderColor: "gray",
+                                                    userSelect: "none"
+                                                }}
+                                                >
+                                                {item}
+                                            </div>
+                                            </GridItem>
+                                        ))}
+                                        </GridDropZone>
+                                    </div>
+                                </div></center>
+                            </Col>
+                            <Col>
+                                <center><div className="row" style={{width: 200, height: 100}}>
+                                    <div className="col-sm container" style={{borderStyle: "solid"}}>
+                                        <center><p>Four</p></center>
+                                        <GridDropZone
+                                        id="array"
+                                        boxesPerRow={2}
+                                        rowHeight={100}
+                                        style={{ height: "100%" }}
+                                        >
+                                        {items.levelTwoLeftFour.map(item => (
+                                            <GridItem key={item}>
+                                            <div
+                                                style={{
+                                                    width: 100,
+                                                    backgroundColor: item % 2 === 1 ? "black" : "orange",
+                                                    color: item % 2 === 1 ? "orange" : "black",
+                                                    fontSize: 40,
+                                                    fontWeight: "bold",
+                                                    textAlign: "center",
+                                                    borderStyle: "solid",
+                                                    borderColor: "gray",
+                                                    userSelect: "none"
+                                                }}
+                                                >
+                                                {item}
+                                            </div>
+                                            </GridItem>
+                                        ))}
+                                        </GridDropZone>
+                                    </div>
+                                </div></center>
+                            </Col>
+                            <Col>
+                                <center><div className="row" style={{width: 200, height: 100}}>
+                                    <div className="col-sm container" style={{borderStyle: "solid"}}>
+                                        <center><p>Five</p></center>
+                                        <GridDropZone
+                                        id="array"
+                                        boxesPerRow={2}
+                                        rowHeight={100}
+                                        style={{ height: "100%" }}
+                                        >
+                                        {items.levelTwoLeftFive.map(item => (
+                                            <GridItem key={item}>
+                                            <div
+                                                style={{
+                                                    width: 100,
+                                                    backgroundColor: item % 2 === 1 ? "black" : "orange",
+                                                    color: item % 2 === 1 ? "orange" : "black",
+                                                    fontSize: 40,
+                                                    fontWeight: "bold",
+                                                    textAlign: "center",
+                                                    borderStyle: "solid",
+                                                    borderColor: "gray",
+                                                    userSelect: "none"
+                                                }}
+                                                >
+                                                {item}
+                                            </div>
+                                            </GridItem>
+                                        ))}
+                                        </GridDropZone>
+                                    </div>
+                                </div></center>
+                            </Col>
+                            <Col>
+                                <center><div className="row" style={{width: 200, height: 100}}>
+                                    <div className="col-sm container" style={{borderStyle: "solid"}}>
+                                        <center><p>Six</p></center>
+                                        <GridDropZone
+                                        id="array"
+                                        boxesPerRow={2}
+                                        rowHeight={100}
+                                        style={{ height: "100%" }}
+                                        >
+                                        {items.levelTwoLeftSix.map(item => (
+                                            <GridItem key={item}>
+                                            <div
+                                                style={{
+                                                    width: 100,
+                                                    backgroundColor: item % 2 === 1 ? "black" : "orange",
+                                                    color: item % 2 === 1 ? "orange" : "black",
+                                                    fontSize: 40,
+                                                    fontWeight: "bold",
+                                                    textAlign: "center",
+                                                    borderStyle: "solid",
+                                                    borderColor: "gray",
+                                                    userSelect: "none"
+                                                }}
+                                                >
+                                                {item}
+                                            </div>
+                                            </GridItem>
+                                        ))}
+                                        </GridDropZone>
+                                    </div>
+                                </div></center>
+                            </Col>
+                        </Row>
+                    </Container>
+                    <hr />
+                    <center><p>Input</p></center>
+                    <Container fluid style={{width: "90%", height: "90%"}}>
+                        <Row xs={1} sm={1}>
+                            <Col>
+                                <center><div className="row" style={{width: 800, height: 200}}>
+                                    <div className="col-sm container" style={{borderStyle: "solid"}}>
+                                        <center><p>Input</p></center>
+                                        <GridDropZone
+                                        id="array"
+                                        boxesPerRow={8}
+                                        rowHeight={100}
+                                        style={{ height: "100%" }}
+                                        >
+                                        {items.input.map(item => (
+                                            <GridItem key={item}>
+                                            <div
+                                                style={{
+                                                    width: 100,
+                                                    backgroundColor: item % 2 === 1 ? "black" : "orange",
+                                                    color: item % 2 === 1 ? "orange" : "black",
+                                                    fontSize: 40,
+                                                    fontWeight: "bold",
+                                                    textAlign: "center",
+                                                    borderStyle: "solid",
+                                                    borderColor: "gray",
+                                                    userSelect: "none"
+                                                }}
+                                                >
+                                                {item}
+                                            </div>
+                                            </GridItem>
+                                        ))}
+                                        </GridDropZone>
+                                    </div>
+                                </div></center>
+                            </Col>
+                        </Row>
+                    </Container>
+                </GridContextProvider>
+                <br />
+                <br />
 
-            <center><Row xs={1} sm={3}>
-                <Col>
-                    <Button variant="secondary" size="lg" onClick={buttonPress}>
-                        Click here to check your state!
-                    </Button>
-                </Col>
-                <Col>
-                    <OverlayTrigger trigger="click" placement="bottom" overlay={
-                        <Popover id="instructions">
-                            <Popover.Header as="h3">Instructions</Popover.Header>
-                            <Popover.Body>{instructions}</Popover.Body>
-                        </Popover>
-                        }>
-                        <Button variant="primary" size="lg">Toggle to see the instructions!</Button>
-                    </OverlayTrigger>
-                </Col>
-                <Col>
-                    <OverlayTrigger trigger="click" placement="left" overlay={
-                        <Popover id="step">
-                            <Popover.Header as="h3">Previous Step (Step #{currStep.stepNum})</Popover.Header>
-                            <Popover.Body>{currStep.text}</Popover.Body>
-                        </Popover>
-                        }>
-                        <Button variant="success" size="lg">Toggle to see the previous step you took!</Button>
-                    </OverlayTrigger>
-                </Col>
-            </Row></center>
+                <center><Row xs={1} sm={3}>
+                    <Col>
+                        <Button variant="secondary" size="lg" onClick={buttonPress}>
+                            Click here to check your state!
+                        </Button>
+                    </Col>
+                    <Col>
+                        <Button onClick={() => setOverlayVisibility("block")}>Toggle Instructions</Button>
+                    </Col>
+                    <Col>
+                        <OverlayTrigger trigger="click" placement="left" overlay={
+                            <Popover id="step">
+                                <Popover.Header as="h3">Previous Step (Step #{currStep.stepNum})</Popover.Header>
+                                <Popover.Body>{currStep.text}</Popover.Body>
+                            </Popover>
+                            }>
+                            <Button variant="success" size="lg">Toggle to see the previous step you took!</Button>
+                        </OverlayTrigger>
+                    </Col>
+                </Row></center>
 
-            <Alert variant="success" onClose={() => setVisibility({...currVisibility, correct : hidden})} dismissible style={{visibility: currVisibility.correct, position: "absolute"}}>
-                <Alert.Heading>Nice job!</Alert.Heading>
-                <p>
-                    Now continue onto the next step!
-                </p>
-            </Alert>
-            <Alert variant="danger" onClose={() => setVisibility({...currVisibility, incorrect : hidden})} dismissible style={{visibility: currVisibility.incorrect, position: "absolute"}}>
-                <Alert.Heading>Not quite right!</Alert.Heading>
-                <p>
-                    Maybe try something different...
-                </p>
-            </Alert>
-        </Container>      
+                <Alert variant="success" onClose={() => setVisibility({...currVisibility, correct : hidden})} dismissible style={{visibility: currVisibility.correct, position: "absolute"}}>
+                    <Alert.Heading>Nice job!</Alert.Heading>
+                    <p>
+                        Now continue onto the next step!
+                    </p>
+                </Alert>
+                <Alert variant="danger" onClose={() => setVisibility({...currVisibility, incorrect : hidden})} dismissible style={{visibility: currVisibility.incorrect, position: "absolute"}}>
+                    <Alert.Heading>Not quite right!</Alert.Heading>
+                    <p>
+                        Maybe try something different...
+                    </p>
+                </Alert>
+            </Container>
+        </div>
     );
   }
