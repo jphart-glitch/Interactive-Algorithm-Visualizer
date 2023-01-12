@@ -1,3 +1,9 @@
+# Welcome to AlgoActive's GitHub Repository!
+
+AlgoActive is a web application that seeks to create supplementary material to established algorithms and data structures instruction that broadens the accessibility of the topic to kinesthetic learners.\
+This is an independent work project from Princeton University undergraduate COS student John Hart.\
+This is a Node.js application powered by React that uses the npm package manager.\
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
