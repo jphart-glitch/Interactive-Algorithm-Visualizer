@@ -2,13 +2,20 @@
 
 AlgoActive is a web application that seeks to create supplementary material to established algorithms and data structures instruction that broadens the accessibility of the topic to kinesthetic learners.\
 This is an independent work project from Princeton University undergraduate COS student John Hart.\
-This is a Node.js application powered by React that uses the npm package manager.\
+You can access AlgoActive [here](https://algoactive.herokuapp.com/)!
+AlgoActive is a Node.js application powered by React that uses the npm package manager. It utilizes a variety of different packages to improve the interactability and usability of the application. Some packages currently have conflicts with each other, so it requires a special set of actions to operate on. For directions, see the "Getting Started with AlgoActive" section.
 
-# Getting Started with Create React App
+# Getting Started with AlgoActive
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Necessary Steps
+
+Firstly, you should make sure to have the latest version of Node.js and npm installed on your computer. Next, you should create a directory and import all the files from this repository into it. You should then follow the steps found in the "Available Scripts" section.
 
 ## Available Scripts
+
+To install all dependencies, you should run:
+
+### `npm install --force`
 
 In the project directory, you can run:
 
@@ -44,33 +51,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
